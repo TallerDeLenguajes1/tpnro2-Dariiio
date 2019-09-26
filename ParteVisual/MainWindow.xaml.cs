@@ -25,11 +25,15 @@ namespace ParteVisual
         {
             InitializeComponent();
             Docente aa = new Docente();
+            Docente bb = new Docente();
             aa.Nombre = "aaaa";
             aa.Apellido = "eee";
             aa.Dni = "1212121";
             aa.Cargo = "Emperador";
-            MessageBox.Show(aa.ToString());
+            //aa = bb;
+            Curso cc = new Curso();
+            cc.Docente = aa;
+            MessageBox.Show(cc.Docente.ToString());
         }
     }
 }
