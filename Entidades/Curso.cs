@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Curso
+    public abstract class Curso
     {
         string tema;
         DateTime turno;
         decimal cuota;
+        decimal inscripcion;
         List<Alumno> alumnos;
         Docente docente;
         public Curso()
@@ -31,7 +32,12 @@ namespace Entidades
         public decimal Cuota
         {
             get => cuota;
-            set => cuota = value;
+            //set => cuota = value;
+        }
+        public decimal Inscripcion
+        {
+            get => inscripcion;
+            set => inscripcion = value;
         }
         public Docente Docente
         {
@@ -40,7 +46,45 @@ namespace Entidades
         }
         public void CargarAlumno(Alumno alumno)
         {
+            this.alumnos.Add(alumno);
+        }
+        public virtual void CalcularCuota()
+        {
 
         }
     }
+    public class Presencial : Curso
+    {
+        public Presencial() : base()
+        {
+
+        }
+        public override void CalcularCuota()
+        {
+
+        }
+    }
+    public class SemiPresencial : Curso
+    {
+        public SemiPresencial() : base()
+        {
+
+        }
+        public override void CalcularCuota()
+        {
+
+        }
+    }
+    public class NoPresencial : Curso
+    {
+        public NoPresencial() : base()
+        {
+
+        }
+        public override void CalcularCuota()
+        {
+
+        }
+    }
+
 }

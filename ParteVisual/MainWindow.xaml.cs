@@ -26,13 +26,15 @@ namespace ParteVisual
             InitializeComponent();
             Docente aa = new Docente();
             Docente bb = new Docente();
+            Alumno aaa = new Alumno();
             aa.Nombre = "aaaa";
             aa.Apellido = "eee";
             aa.Dni = "1212121";
             aa.Cargo = "Emperador";
             //aa = bb;
-            Curso cc = new Curso();
+            Curso cc = new Presencial();
             cc.Docente = aa;
+            cc.CargarAlumno(aaa);
             MessageBox.Show(cc.Docente.ToString());
         }
     }
