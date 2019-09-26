@@ -15,6 +15,31 @@ namespace Entidades
         {
 
         }
+        public string Nombre
+        {
+            get => nombre;
+            set => nombre = value;
+        }
+        public string Apellido
+        {
+            get => apellido;
+            set => apellido = value;
+        }
+        public string Dni
+        {
+            get => dni;
+            set => dni = value;
+        }
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
+        public DateTime FechaNacimiento
+        {
+            get => fechaNacimiento;
+            set => fechaNacimiento = value;
+        }
         public int Edad()
         {
             return 0;
@@ -24,4 +49,48 @@ namespace Entidades
             return nombre + " " + apellido + " " + dni;
         }
     }
+
+    public class Alumno : Persona
+    {
+        public Alumno() : base()
+        {
+
+        }
+    }
+
+    public class Docente : Persona
+    {
+        string cargo;
+        decimal sueldo;
+        DateTime fechaAlta;
+        public Docente() : base()
+        {
+
+        }
+        public string Cargo
+        {
+            get => cargo;
+            set => cargo = value;
+        }
+        public decimal Sueldo
+        {
+            get => sueldo;
+            set => sueldo = value;
+        }
+        public DateTime FechaAlta
+        {
+            get => fechaAlta;
+            set => fechaAlta = value;
+        }
+        public int Antiguedad()
+        {
+            return 0;
+        }
+        public override string ToString()
+        {
+            return Nombre + " " + Apellido + " " + Dni + " " + cargo + " ";
+        }
+    }
+
+
 }

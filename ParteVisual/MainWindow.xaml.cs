@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace ParteVisual
         public MainWindow()
         {
             InitializeComponent();
+            Docente aa = new Docente();
+            aa.Nombre = "aaaa";
+            aa.Apellido = "eee";
+            aa.Dni = "1212121";
+            aa.Cargo = "Emperador";
+            MessageBox.Show(aa.ToString());
         }
     }
 }
