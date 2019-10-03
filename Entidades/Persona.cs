@@ -15,6 +15,15 @@ namespace Entidades
         {
 
         }
+
+        public Persona(string nombre, string apellido, string dni, DateTime fechaNacimiento)
+        {
+            this.nombre = nombre ?? throw new ArgumentNullException(nameof(nombre));
+            this.apellido = apellido ?? throw new ArgumentNullException(nameof(apellido));
+            this.dni = dni ?? throw new ArgumentNullException(nameof(dni));
+            this.fechaNacimiento = fechaNacimiento;
+        }
+
         public string Nombre
         {
             get => nombre;
@@ -55,6 +64,10 @@ namespace Entidades
         public Alumno() : base()
         {
 
+        }
+
+        public Alumno(string nombre, string apellido, string dni, DateTime fechaNacimiento) : base(nombre, apellido, dni, fechaNacimiento)
+        {
         }
     }
 

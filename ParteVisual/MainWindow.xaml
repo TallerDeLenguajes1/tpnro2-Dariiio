@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <ListBox x:Name="LbxAlumnos" HorizontalAlignment="Left" Height="100" Margin="70,109,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="BtnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="95,235,0,0" VerticalAlignment="Top" Width="75" Click="BtnAgregar_Click"/>
+
     </Grid>
 </Window>

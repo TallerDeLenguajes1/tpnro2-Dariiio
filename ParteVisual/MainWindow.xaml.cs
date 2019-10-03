@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using ParteVisual.Vistas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,9 +22,17 @@ namespace ParteVisual
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Alumno> alumnos;
+        int idAlumnos;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            alumnos = new List<Alumno>();
+            idAlumnos = 0;
+
+            /*
             Docente aa = new Docente();
             Docente bb = new Docente();
             Alumno aaa = new Alumno();
@@ -36,6 +45,16 @@ namespace ParteVisual
             cc.Docente = aa;
             cc.CargarAlumno(aaa);
             MessageBox.Show(cc.Docente.ToString());
+            */        
+        }
+
+        private void BtnAgregar_Click(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show("Anda");
+            FormAlumno formAlumno = new FormAlumno();
+            formAlumno.ShowDialog();
+            alumnos.Add(formAlumno.GetAlumno());
+            MessageBox.Show(alumnos[0].ToString());
         }
     }
 }

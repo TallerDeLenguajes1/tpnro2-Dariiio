@@ -1,0 +1,23 @@
+﻿<Window x:Class="ParteVisual.Vistas.FormAlumno"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ParteVisual.Vistas"
+        mc:Ignorable="d"
+        Title="FormAlumno" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="250">
+            <Label Content="Nombre"/>
+            <TextBox x:Name="TbxNombre" Height="23" TextWrapping="Wrap" Text=""/>
+            <Label Content="Apellido"/>
+            <TextBox x:Name="TbxApellido" Height="23" TextWrapping="Wrap" Text=""/>
+            <Label Content="DNI"/>
+            <TextBox x:Name="TbxDni" Height="23" TextWrapping="Wrap" Text=""/>
+            <Label Content="Fecha Nacimiento"/>
+            <DatePicker x:Name="DtpckNacimiento"/>
+        </StackPanel>
+        <Button Content="Button" Margin="472,353,70,46" Click="Button_Click"/>
+
+    </Grid>
+</Window>
